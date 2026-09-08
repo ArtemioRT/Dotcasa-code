@@ -1,0 +1,13 @@
+//Layout
+
+@use "layout/whoWheAre.scss";
+@use "layout/privacyPolicies.scss";
+@use "layout/termsAndCondition.scss";
+@use "layout//navBar.scss";
+@use "layout/footer.scss";
+@use "base/main-test.scss";
+
+//Components
+
+@use "components/nav_menu.scss";
+@use "components/home.scss";

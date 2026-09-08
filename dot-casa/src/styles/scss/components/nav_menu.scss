@@ -1,0 +1,123 @@
+//Desktop menu
+.desktop-menu {
+  position: absolute;
+  width: 280px;
+  top: 50px;
+  left: -100px;
+  background-color: #fdfdfd;
+  border: 1px solid #e5e7eb;
+  .desktop-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 10px;
+    border: 1px solid #e5e7eb;
+    img {
+      width: 21px;
+      height: 13.77px;
+    }
+    p {
+      font-family: "Raleway", sans-serif;
+      color: #0089f1;
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+  .desktop-menu-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 30px;
+    border: 1px solid #e5e7eb;
+    img {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+    }
+  }
+  .profile-txt {
+    font-family: "Raleway", sans-serif;
+    span {
+      font-weight: 700;
+    }
+  }
+  .menu-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 5px;
+    gap: 5px;
+    .menu-item {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      cursor: pointer;
+      gap: 10px;
+      font-family: "Raleway", sans-serif;
+      font-size: 14px;
+      padding: 20px 20px 20px 29px;
+      border-bottom: 1px solid #e5e7eb;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .menu-border-none {
+      border: none;
+    }
+    .item-active {
+      border-left: 15px solid #0089f1;
+      background-color: #eef7ff;
+      color: #0089f1;
+      font-weight: 700;
+    }
+  }
+  .log-out {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-top: 1px solid #ff001d;
+    color: #ff001d;
+  }
+}
+
+//Menu mobile
+
+.menu-overlay {
+  /* 1. El fondo oscuro fijo a la pantalla */
+  overscroll-behavior: contain;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(28, 42, 54, 0.4);
+  backdrop-filter: blur(8px);
+  z-index: 9998;
+  display: block;
+
+  .desktop-menu {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: auto !important;
+    bottom: 0 !important;
+
+    width: 280px !important;
+    height: 100vh !important;
+    background-color: #fdfdfd !important;
+    margin: 0 !important;
+    transform: none !important;
+
+    z-index: 9999 !important;
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
+  }
+}
