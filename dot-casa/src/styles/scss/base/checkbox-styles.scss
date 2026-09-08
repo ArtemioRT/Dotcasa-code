@@ -1,0 +1,44 @@
+//Estilos del checkbox
+.dot-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-family: sans-serif;
+  user-select: none;
+}
+
+.dot-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.dot-checkbox .checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #0089f1;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.dot-checkbox input[type="checkbox"]:checked + .checkmark {
+  background-color: #fdfdfd;
+  border-color: #2563eb;
+}
+
+.dot-checkbox .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid #0089f1;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.dot-checkbox input[type="checkbox"]:checked + .checkmark::after {
+  display: block;
+}
