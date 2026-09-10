@@ -1,0 +1,36 @@
+/**
+ * Alias legibles derivados de `Database`.
+ *
+ * Importa SIEMPRE desde aquí, nunca de database.ts directo: así puedes
+ * regenerar database.ts con el CLI (que no exporta tipos sueltos) sin
+ * tocar una sola línea del resto del proyecto.
+ */
+import type { Database } from './database'
+
+type Tablas = Database['public']['Tables']
+type Vistas = Database['public']['Views']
+
+export type UserRow = Tablas['user']['Row']
+export type UserUpdate = Tablas['user']['Update']
+
+export type PerfilRow = Tablas['perfil']['Row']
+export type PerfilInsert = Tablas['perfil']['Insert']
+export type PerfilUpdate = Tablas['perfil']['Update']
+export type PerfilPublicoRow = Vistas['perfil_publico']['Row']
+
+export type PropiedadRow = Tablas['propiedades']['Row']
+export type PropiedadInsert = Tablas['propiedades']['Insert']
+export type PropiedadUpdate = Tablas['propiedades']['Update']
+
+export type MiembroRow = Tablas['miembros']['Row']
+export type MiembroInsert = Tablas['miembros']['Insert']
+
+export type InmobiliariaRow = Tablas['inmobiliaria']['Row']
+export type InmobiliariaUpdate = Tablas['inmobiliaria']['Update']
+
+export type InteresadoRow = Tablas['interesados']['Row']
+export type InteresadoInsert = Tablas['interesados']['Insert']
+
+export type EstatusPropiedad = 'borrador' | 'publicada' | 'pausada' | 'vendida'
+export type TipoOperacion = 'venta' | 'renta'
+export type RolMiembro = 'owner' | 'admin' | 'agente' | 'asesor'
