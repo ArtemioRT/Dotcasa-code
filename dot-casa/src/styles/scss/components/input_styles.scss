@@ -1,0 +1,163 @@
+// Input styles
+.row-input-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  .input-label-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+
+    p {
+      font-size: 16px;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    input {
+      font-family: "Montserrat", sans-serif;
+      background: none;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      outline: none;
+      padding: 20px 10px;
+      font-size: 16px;
+      height: 63px;
+    }
+
+    .no-borders {
+      width: 95%;
+      border: none;
+    }
+
+    .input-icon {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding-right: 15px;
+      img {
+        width: 25px;
+        height: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .ineditable-data {
+    gap: 5px;
+    width: 100%;
+    max-height: 70px;
+    opacity: 0.5;
+    border-radius: 10px;
+    padding: 20px 10px;
+    background-color: #e7eef0;
+  }
+
+  .label-complete {
+    width: 100%;
+  }
+}
+
+// Input file
+.input-file-container {
+  gap: 15px;
+  border: 1px solid #e5e7eb;
+  padding: 20px;
+  border-radius: 10px;
+
+  input[type="file"] {
+    width: 100%;
+    min-height: 100px;
+    cursor: pointer;
+    color: transparent;
+
+    &::file-selector-button {
+      display: none;
+    }
+
+    &::before {
+      content: "Sube aquí tu constancia de situación fiscal";
+      color: #000000;
+      font-family: "Montserrat", sans-serif;
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      border-radius: 10px;
+    }
+
+    &.input-cif::before {
+      content: "Sube aquí tu CSF";
+    }
+    &.input-frontal::before {
+      content: "Imagen Frontal";
+    }
+    &.input-back::before {
+      content: "Imagen Trasera";
+    }
+  }
+  .file-row {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+// Checkbox styles
+.row-txts {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  h3 {
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+  }
+
+  p {
+    color: #1c2a36;
+    text-align: left;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+.checkbox-container {
+  gap: 10px;
+
+  p {
+    font-size: 12px;
+    font-weight: 700;
+  }
+}
+
+.p-font-size {
+  p {
+    font-size: 14px;
+  }
+}
+
+// Mobile styles (CORRECCIÓN 3: Al nivel raíz para afectar al contenedor general)
+@media (max-width: 767px) {
+  .row-input-container {
+    .input-label-container {
+      p {
+        font-size: 12px;
+      }
+      input {
+        font-size: 14px;
+      }
+    }
+  }
+  .input-file-container {
+    input[type="file"] {
+      &::before {
+        font-size: 13px;
+      }
+    }
+  }
+}

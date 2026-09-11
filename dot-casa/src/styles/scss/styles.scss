@@ -1,3 +1,6 @@
+//Base
+@use "base/checkbox-styles.scss";
+
 //Layout
 
 @use "layout/whoWheAre.scss";
@@ -7,7 +10,16 @@
 @use "layout/footer.scss";
 @use "base/main-test.scss";
 @use "property-carousel";
+
 //Components
 
 @use "components/nav_menu.scss";
 @use "components/home.scss";
+@use "components/account_settings.scss";
+@use "components/input_styles.scss";
+@use "components/auth_screen.scss";
+@use "components/headers_container.scss";
+@use "components/prev_register.scss";
+@use "components/unsuscribe_page.scss";
+@use "components/reset_pw_container.scss";
+@use "components/not_found.scss";
