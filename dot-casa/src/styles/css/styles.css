@@ -430,6 +430,39 @@ footer .sec-footer h3 {
   height: 100%;
 }
 
+.image-property {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.property-card:hover .photo-arrow {
+  opacity: 1;
+}
+
+.photo-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.photo-arrow:hover {
+  background: #fff;
+}
+.photo-arrow-left {
+  left: 8px;
+}
+.photo-arrow-right {
+  right: 8px;
+}
+.photo-arrow img {
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+}
+
 .desktop-menu {
   position: absolute;
   width: 280px;
